@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "student",
     "rest_framework",
     "rest_framework_swagger",
-    "drf_yasg2",
+    "drf_yasg",
        
 ]
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }

@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from .models import Student,Education
+from .models import Student
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import StudentSerializer,EducationSerializer
+from .serializers import StudentSerializer
 from django.shortcuts import get_object_or_404
-from rest_framework.permissions import AllowAny
-from rest_framework_swagger import renderers
-from rest_framework.schemas import SchemaGenerator
+
 
 class StudentList(APIView):
     def get(self,request):
@@ -20,17 +18,3 @@ class StudentDetail(APIView):
         data = StudentSerializer(students).data
         return Response(data)
           
-class CreateEducation(APIView):
-    def post(self,request):
-        data= EducationSerializer(data=request.data)
-        if data.is_valid():
-            data.save()
-            return Response(data)
-        else:
-            return ("error")
-        
-class EducationList(APIView):
-    def get(self,request):
-        education=Education.objects.all()
-        data=EducationSerializer(education,many=True).data 
-        return Response(data)

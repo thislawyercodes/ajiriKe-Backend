@@ -14,21 +14,8 @@ class Student(models.Model):
     
     def __str__(self):
         return self.first_name
-   
-   
-class Education(models.Model):
-    academic_transcripts=models.URLField(blank=True)
-    skills=models.TextField(blank=True)
-    Licenses=models.FileField(blank=True)
-    certifications=models.FileField(blank=True)
-    languages=models.CharField(max_length=100,blank=True)
-    
-    
-class JobPreferences(models.Model):
-    job_title=models.CharField(max_length=100,blank=True)
-    job_types=models.CharField(max_length=100,blank=True)
-    work_environment=models.CharField(max_length=100,blank=True)
-    
+     
+
 # class Volunteer(models.Model):
 #     job_title=models.CharField(max_length=100)
 #     job_types=models.CharField(max_length=100)

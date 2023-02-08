@@ -1,9 +1,6 @@
 from django.db import models
 from location_field.models.plain import PlainLocationField
 from phonenumber_field.modelfields import PhoneNumberField
-
-
-
 # Create your models here.
 class Student(models.Model):
     first_name=models.CharField(max_length=50,blank=False)

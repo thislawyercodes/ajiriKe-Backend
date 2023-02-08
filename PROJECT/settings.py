@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_swagger",
     "drf_yasg",
+    'location_field.apps.DefaultConfig',
+
        
 ]
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
@@ -141,3 +143,10 @@ STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOCATION_FIELD = {
+    'provider.google.api': '//maps.google.com/maps/api/js?sensor=false',
+    'provider.google.api_key': '<PLACE YOUR API KEY HERE>',
+    'provider.google.api_libraries': '',
+    'provider.google.map.type': 'ROADMAP',
+}

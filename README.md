@@ -1,12 +1,11 @@
 # ajiriKe-Backend
 
-#The  backend  application for ajiriKe. 
-a fresh-graduates/ entry level job seeking platform 
+The  backend  application for ajiriKe -a fresh-graduates/ entry level job seeking platform.
 
 # How to setup the project locally
 
 
-Clone the repository
+Clone the repository as you usually would.
 ----------------------
 
 Set up your virtual environment

@@ -1,6 +1,7 @@
 from django.db import models
 from location_field.models.plain import PlainLocationField
 from phonenumber_field.modelfields import PhoneNumberField
+
 # Create your models here.
 class Student(models.Model):
     first_name=models.CharField(max_length=50,blank=False)
@@ -12,7 +13,10 @@ class Student(models.Model):
     resume=models.FileField(blank=False,upload_to='uploads')
     cover_letter=models.FileField(blank=False,upload_to='uploads')
     #education=models.ForeignKey(Education,on_delete=models.CASCADE)
-    
+
+    class Meta:
+        db_table="student"
+
     def __str__(self):
         return self.first_name
      
